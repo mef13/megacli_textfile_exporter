@@ -7,7 +7,7 @@ VD_PDID_ERRORS=`$MEGACLI -ldpdinfo -aALL | grep -E "(Id|State  |Media Error|Firm
 #Battery info
 BBU_OUT=`$MEGACLI -AdpBbuCmd -aAll | grep -E "(BBU status for Adapter|^Voltage|^Current|Battery State|Battery Replacement required|^Remaining Capacity|^Full Charge Capacity|^Max Error)"`
 
-echo "${BBU_OUT}"
+#echo "${BBU_OUT}"
 
 adapter=0
 bat_voltage=()
