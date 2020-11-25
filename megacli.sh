@@ -3,9 +3,9 @@
 MEGACLI="/opt/MegaRAID/MegaCli/MegaCli64"
 NAMESPACE="megacli"
 #All about disks
-VD_PDID_ERRORS=`$MEGACLI -ldpdinfo -aALL | grep -E "(Id|State  |Media Error|Firmware state)"`
+VD_PDID_ERRORS=`$MEGACLI -ldpdinfo -aALL -NoLog| grep -E "(Id|State  |Media Error|Firmware state)"`
 #Battery info
-BBU_OUT=`$MEGACLI -AdpBbuCmd -aAll | grep -E "(BBU status for Adapter|^Voltage|^Current|Battery State|Battery Replacement required|^Remaining Capacity|^Full Charge Capacity|^Max Error)"`
+BBU_OUT=`$MEGACLI -AdpBbuCmd -aAll -NoLog| grep -E "(BBU status for Adapter|^Voltage|^Current|Battery State|Battery Replacement required|^Remaining Capacity|^Full Charge Capacity|^Max Error)"`
 
 #echo "${BBU_OUT}"
 
