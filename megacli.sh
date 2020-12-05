@@ -164,49 +164,49 @@ printBBU() {
     echo "# TYPE ${NAMESPACE}_bbu_voltage gauge"
     for index in ${!bat_voltage[*]}
     do
-        echo "${NAMESPACE}_bbu_voltage{adapter=${index}} ${bat_voltage[$index]}"
+        echo "${NAMESPACE}_bbu_voltage{adapter=\"${index}\"} ${bat_voltage[$index]}"
     done
 
     echo "# HELP ${NAMESPACE}_bbu_amp_current BBU Current mA."
     echo "# TYPE ${NAMESPACE}_bbu_amp_current gauge"
     for index in ${!bat_amp[*]}
     do
-        echo "${NAMESPACE}_bbu_amp_current{adapter=${index}} ${bat_amp[$index]}"
+        echo "${NAMESPACE}_bbu_amp_current{adapter=\"${index}\"} ${bat_amp[$index]}"
     done
 
     echo "# HELP ${NAMESPACE}_bbu_bat_state Battery State."
     echo "# TYPE ${NAMESPACE}_bbu_bat_state gauge"
     for index in ${!bat_state[*]}
     do
-        echo "${NAMESPACE}_bbu_bat_state{adapter=${index}} ${bat_state[$index]}"
+        echo "${NAMESPACE}_bbu_bat_state{adapter=\"${index}\"} ${bat_state[$index]}"
     done
 
     echo "# HELP ${NAMESPACE}_bbu_bat_replacment Battery needs to be replaced."
     echo "# TYPE ${NAMESPACE}_bbu_bat_replacment gauge"
     for index in ${!bat_replacment[*]}
     do
-        echo "${NAMESPACE}_bbu_bat_replacment{adapter=${index}} ${bat_replacment[$index]}"
+        echo "${NAMESPACE}_bbu_bat_replacment{adapter=\"${index}\"} ${bat_replacment[$index]}"
     done
 
     echo "# HELP ${NAMESPACE}_bbu_remaining_cap BBU Remaining Capacity mAh."
     echo "# TYPE ${NAMESPACE}_bbu_remaining_cap gauge"
     for index in ${!bat_remaining_cap[*]}
     do
-        echo "${NAMESPACE}_bbu_remaining_cap{adapter=${index}} ${bat_remaining_cap[$index]}"
+        echo "${NAMESPACE}_bbu_remaining_cap{adapter=\"${index}\"} ${bat_remaining_cap[$index]}"
     done
 
     echo "# HELP ${NAMESPACE}_bbu_full_cap BBU Full Charge Capacity mAh."
     echo "# TYPE ${NAMESPACE}_bbu_full_cap gauge"
     for index in ${!bat_full_cap[*]}
     do
-        echo "${NAMESPACE}_bbu_full_cap{adapter=${index}} ${bat_full_cap[$index]}"
+        echo "${NAMESPACE}_bbu_full_cap{adapter=\"${index}\"} ${bat_full_cap[$index]}"
     done
 
     echo "# HELP ${NAMESPACE}_bbu_max_error Battery Max Error percent."
     echo "# TYPE ${NAMESPACE}_bbu_max_error gauge"
     for index in ${!bat_max_error[*]}
     do
-        echo "${NAMESPACE}_bbu_max_error{adapter=${index}} ${bat_max_error[$index]}"
+        echo "${NAMESPACE}_bbu_max_error{adapter=\"${index}\"} ${bat_max_error[$index]}"
     done
 }
 
@@ -215,49 +215,49 @@ printADP() {
     echo "# TYPE ${NAMESPACE}_adp_vd_count gauge"
     for index in ${!adp_vd_count[*]}
     do
-        echo "${NAMESPACE}_adp_vd_count{adapter=${index}} ${adp_vd_count[$index]}"
+        echo "${NAMESPACE}_adp_vd_count{adapter=\"${index}\"} ${adp_vd_count[$index]}"
     done
 
     echo "# HELP ${NAMESPACE}_adp_vd_degraded_count Adapter Virtual Drives Degraded count."
     echo "# TYPE ${NAMESPACE}_adp_vd_degraded_count gauge"
     for index in ${!adp_vd_degraded[*]}
     do
-        echo "${NAMESPACE}_adp_vd_degraded_count{adapter=${index}} ${adp_vd_degraded[$index]}"
+        echo "${NAMESPACE}_adp_vd_degraded_count{adapter=\"${index}\"} ${adp_vd_degraded[$index]}"
     done
 
     echo "# HELP ${NAMESPACE}_adp_vd_offline_count Adapter Virtual Drives Offline count."
     echo "# TYPE ${NAMESPACE}_adp_vd_offline_count gauge"
     for index in ${!adp_vd_offline[*]}
     do
-        echo "${NAMESPACE}_adp_vd_offline_count{adapter=${index}} ${adp_vd_offline[$index]}"
+        echo "${NAMESPACE}_adp_vd_offline_count{adapter=\"${index}\"} ${adp_vd_offline[$index]}"
     done
 
     echo "# HELP ${NAMESPACE}_adp_pd_count Adapter Physical Devices count."
     echo "# TYPE ${NAMESPACE}_adp_pd_count gauge"
     for index in ${!adp_pd_count[*]}
     do
-        echo "${NAMESPACE}_adp_pd_count{adapter=${index}} ${adp_pd_count[$index]}"
+        echo "${NAMESPACE}_adp_pd_count{adapter=\"${index}\"} ${adp_pd_count[$index]}"
     done
 
     echo "# HELP ${NAMESPACE}_adp_pd_disks_count Adapter Physical Disks count."
     echo "# TYPE ${NAMESPACE}_adp_pd_disks_count gauge"
     for index in ${!adp_pd_disks[*]}
     do
-        echo "${NAMESPACE}_adp_pd_disks_count{adapter=${index}} ${adp_pd_disks[$index]}"
+        echo "${NAMESPACE}_adp_pd_disks_count{adapter=\"${index}\"} ${adp_pd_disks[$index]}"
     done
 
     echo "# HELP ${NAMESPACE}_adp_pd_critical_disks_count Adapter Physical Critical Disks count."
     echo "# TYPE ${NAMESPACE}_adp_pd_critical_disks_count gauge"
     for index in ${!adp_pd_critical_disks[*]}
     do
-        echo "${NAMESPACE}_adp_pd_critical_disks_count{adapter=${index}} ${adp_pd_critical_disks[$index]}"
+        echo "${NAMESPACE}_adp_pd_critical_disks_count{adapter=\"${index}\"} ${adp_pd_critical_disks[$index]}"
     done
 
     echo "# HELP ${NAMESPACE}_adp_pd_failed_disks_count Adapter Physical Failed Disks count."
     echo "# TYPE ${NAMESPACE}_adp_pd_failed_disks_count gauge"
     for index in ${!adp_pd_failed_disks[*]}
     do
-        echo "${NAMESPACE}_adp_pd_failed_disks_count{adapter=${index}} ${adp_pd_failed_disks[$index]}"
+        echo "${NAMESPACE}_adp_pd_failed_disks_count{adapter=\"${index}\"} ${adp_pd_failed_disks[$index]}"
     done
 }
 
