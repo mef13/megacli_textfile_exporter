@@ -51,12 +51,15 @@ do
         continue
     fi
 
-    exp="$(expr match "$bbu_line" '^Battery State:[[:blank:]]*\([[:alpha:]]\+\).*')"
+    exp="$(expr match "$bbu_line" '^Battery State:[[:blank:]]*\([a-zA-Z\(\)]\+\).*')"
     if [ -n "${exp}" ]
     then
         if [[ $exp == "Optimal" ]]
         then
             bat_state[$adapter]=1
+        elif [[ $exp == "Degraded(Charging)" ]]
+        then
+            bat_state[$adapter]=2
         else
             bat_state[$adapter]=0
         fi
