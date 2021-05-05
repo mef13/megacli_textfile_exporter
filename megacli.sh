@@ -60,6 +60,9 @@ do
         elif [[ $exp == "Degraded(Charging)" ]]
         then
             bat_state[$adapter]=2
+        elif [[ $exp == "Learning" ]]
+        then
+            bat_state[$adapter]=3
         else
             bat_state[$adapter]=0
         fi
