@@ -44,7 +44,7 @@ do
         continue
     fi
 
-    exp="$(expr match "$bbu_line" '^Current:[[:blank:]]*\([[:digit:]]\+\).*')"
+    exp="$(expr match "$bbu_line" '^Current:[[:blank:]]*\(-*[[:digit:]]\+\).*')"
     if [ -n "${exp}" ]
     then
         bat_amp[$adapter]=$exp
